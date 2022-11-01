@@ -6,12 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trabalhando com tabelas - DIO.me</title>
     <style>
-      table tr:nth-child(even) {
-        background-color: burlywood;
+      table {
+        -webkit-box-shadow: 12px 14px 6px 5px rgba(0, 0, 0, 0.24);
+        box-shadow: 12px 14px 6px 5px rgba(0, 0, 0, 0.24);
+        border: solid 1px gray;
+      }
+      table thead th {
+        background-color: black;
+        color: white;
+      }
+      table tfoot td {
+        background-color: lightgrey;
       }
 
-      table tr:hover td {
-        background-color: rgb(151, 135, 222);
+      table tbody tr:nth-child(even) td {
+        background-color: #e9e9e9;
+        cursor: pointer;
+      }
+
+      table tbody tr:hover td {
+        background-color: #f1f1f1;
       }
     </style>
   </head>
@@ -89,9 +103,14 @@
 
     <hr />
     <h2>Tabela 3</h2>
-    <table border="1" align="center" width="400">
-        <caption>Tabela de idades</caption>
+    <table align="center" width="400" cellspacing="0" cellpadding="5">
+      <caption>
+        Tabela de idades
+      </caption>
       <thead>
+        <tr>
+            <th colspan="2">Minha tabela</th>
+        </tr>
         <tr>
           <th>Nome Completo</th>
           <th>Idade</th>
